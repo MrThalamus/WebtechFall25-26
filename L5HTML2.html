@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>University Admission Form - AIUB</title>
+</head>
+
+<body>
+  <h1>University Admission Form</h1>
+  <h2>American International University-Bangladesh (AIUB)</h2>
+
+  <form action="#" method="post">
+
+    <fieldset>
+      <legend>Personal Information</legend>
+
+      <label for="fullname">Full Name:</label><br>
+      <input type="text" id="fullname" name="fullname" required maxlength="50"><br><br>
+
+      <label for="fathername">Father's Name:</label><br>
+      <input type="text" id="fathername" name="fathername" required maxlength="50"><br><br>
+
+      <label for="mothername">Mother's Name:</label><br>
+      <input type="text" id="mothername" name="mothername" required maxlength="50"><br><br>
+
+      <label for="dob">Date of Birth:</label><br>
+      <input type="date" id="dob" name="dob" required><br><br>
+
+      <label>Gender:</label><br>
+      <input type="radio" id="male" name="gender" value="male" required>
+      <label for="male">Male</label>
+      <input type="radio" id="female" name="gender" value="female" required>
+      <label for="female">Female</label>
+      <input type="radio" id="other" name="gender" value="other" required>
+      <label for="other">Other</label><br><br>
+
+      <label for="email">Email Address:</label><br>
+      <input type="email" id="email" name="email" required><br><br>
+
+      <label for="phone">Phone Number:</label><br>
+      <input type="text" id="phone" name="phone" required maxlength="15"><br><br>
+
+      <label for="address">Present Address:</label><br>
+      <textarea id="address" name="address" rows="3" cols="40" required maxlength="200"></textarea><br><br>
+    </fieldset>
+
+    <br>
+
+    <fieldset>
+      <legend>Academic Information</legend>
+
+      <label for="ssc">SSC Institution:</label><br>
+      <input type="text" id="ssc" name="ssc" required maxlength="100"><br><br>
+
+      <label for="sscyear">SSC Passing Year:</label><br>
+      <input type="text" id="sscyear" name="sscyear" required maxlength="4"><br><br>
+
+      <label for="sscgpa">SSC GPA:</label><br>
+      <input type="text" id="sscgpa" name="sscgpa" required maxlength="4"><br><br>
+
+      <label for="hsc">HSC Institution:</label><br>
+      <input type="text" id="hsc" name="hsc" required maxlength="100"><br><br>
+
+      <label for="hscyear">HSC Passing Year:</label><br>
+      <input type="text" id="hscyear" name="hscyear" required maxlength="4"><br><br>
+
+      <label for="hscgpa">HSC GPA:</label><br>
+      <input type="text" id="hscgpa" name="hscgpa" required maxlength="4"><br><br>
+
+      <label for="department">Preferred Department:</label><br>
+      <select id="department" name="department" required>
+        <option value="">-- Select Department --</option>
+        <option value="cse">Computer Science and Engineering</option>
+        <option value="eee">Electrical and Electronics Engineering</option>
+        <option value="civil">Civil Engineering</option>
+        <option value="bba">Business Administration</option>
+        <option value="english">English</option>
+        <option value="law">Law</option>
+      </select><br><br>
+
+      <label>Areas of Interest:</label><br>
+      <input type="checkbox" id="programming" name="interests" value="programming">
+      <label for="programming">Programming</label><br>
+      <input type="checkbox" id="webdev" name="interests" value="webdev">
+      <label for="webdev">Web Development</label><br>
+      <input type="checkbox" id="ai" name="interests" value="ai">
+      <label for="ai">Artificial Intelligence</label><br>
+      <input type="checkbox" id="networking" name="interests" value="networking">
+      <label for="networking">Networking</label><br>
+      <input type="checkbox" id="database" name="interests" value="database">
+      <label for="database">Database Management</label><br><br>
+    </fieldset>
+
+    <br>
+
+    <fieldset>
+      <legend>Required Documents</legend>
+
+      <label for="photo">Upload Recent Photograph:</label><br>
+      <input type="file" id="photo" name="photo" required><br><br>
+
+      <label for="ssccert">Upload SSC Certificate:</label><br>
+      <input type="file" id="ssccert" name="ssccert" required><br><br>
+
+      <label for="hsccert">Upload HSC Certificate:</label><br>
+      <input type="file" id="hsccert" name="hsccert" required><br><br>
+
+      <label for="nid">Upload NID/Birth Certificate:</label><br>
+      <input type="file" id="nid" name="nid" required><br><br>
+    </fieldset>
+
+    <br>
+
+    <input type="submit" value="Submit Application">
+    <input type="reset" value="Reset Form">
+  </form>
+</body>
+
+</html>
