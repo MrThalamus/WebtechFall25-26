@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lab Task 09: Multi-section Layout</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    h1 {
+      text-align: center;
+      padding: 20px;
+      background-color: #333;
+      color: white;
+      margin: 0;
+    }
+
+    
+    .container {
+      font-size: 0;
+       
+    }
+
+     
+    .sidebar,
+    .main-content,
+    .advertisement {
+      display: inline-block;
+      vertical-align: top;
+      padding: 20px;
+      border: 2px solid #333;
+      margin: 10px 5px;
+      box-sizing: border-box;
+      font-size: 16px;
+    
+    }
+
+    
+    .sidebar {
+      width: 20%;
+      background-color: #e8f4f8;
+    }
+
+   
+    .main-content {
+      width: 60%;
+      background-color: #f9f9f9;
+    }
+
+ 
+    .advertisement {
+      width: 18%;
+      background-color: #fff3cd;
+    }
+
+     
+    h2 {
+      color: #333;
+      margin-top: 0;
+      border-bottom: 2px solid #333;
+      padding-bottom: 10px;
+    }
+
+    .sidebar ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    .sidebar li {
+      padding: 8px 0;
+      border-bottom: 1px solid #ccc;
+    }
+
+    .sidebar a {
+      text-decoration: none;
+      color: #0066cc;
+    }
+
+    .sidebar a:hover {
+      color: #004499;
+    }
+
+    .main-content article {
+      margin-bottom: 20px;
+      padding-bottom: 15px;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .main-content h3 {
+      color: #0066cc;
+      margin-bottom: 10px;
+    }
+
+    .advertisement .ad-box {
+      background-color: #ff6b6b;
+      color: white;
+      padding: 15px;
+      margin-bottom: 15px;
+      text-align: center;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>News Portal Layout</h1>
+
+  <!-- Step 5: Container ensures boxes align properly without wrapping -->
+  <div class="container">
+    <!-- Step 1: Sidebar Box -->
+    <div class="sidebar">
+      <!-- Step 6: Heading and text inside sidebar -->
+      <h2>Categories</h2>
+      <ul>
+        <li><a href="#">World News</a></li>
+        <li><a href="#">Sports</a></li>
+        <li><a href="#">Technology</a></li>
+        <li><a href="#">Business</a></li>
+        <li><a href="#">Entertainment</a></li>
+        <li><a href="#">Health</a></li>
+        <li><a href="#">Science</a></li>
+        <li><a href="#">Politics</a></li>
+      </ul>
+    </div>
+
+    
+    <div class="main-content">
+       
+      <h2>Latest Articles</h2>
+
+      <article>
+        <h3>Breaking: Global Climate Summit Concludes</h3>
+        <p>
+          World leaders have reached a landmark agreement on climate action during
+          the three-day summit. The agreement includes commitments to reduce carbon
+          emissions by 40% over the next decade and increase funding for renewable
+          energy projects in developing nations.
+        </p>
+      </article>
+
+      <article>
+        <h3>Tech Giants Announce AI Partnership</h3>
+        <p>
+          Major technology companies have joined forces to develop ethical AI
+          standards and promote responsible innovation. The partnership aims to
+          address concerns about AI safety, privacy, and transparency while
+          accelerating technological advancement.
+        </p>
+      </article>
+
+      <article>
+        <h3>Sports: National Team Wins Championship</h3>
+        <p>
+          In a thrilling final match, the national football team secured victory
+          with a dramatic last-minute goal. Fans celebrated across the country as
+          the team brought home their first championship title in over a decade.
+        </p>
+      </article>
+
+      <article>
+        <h3>Economic Growth Exceeds Expectations</h3>
+        <p>
+          Latest economic data shows stronger than expected growth in the third
+          quarter, driven by increased consumer spending and business investment.
+          Analysts predict continued positive momentum heading into the new year.
+        </p>
+      </article>
+    </div>
+
+   
+    <div class="advertisement">
+    
+      <h2>Advertisements</h2>
+
+      <div class="ad-box">
+        <strong>Special Offer!</strong>
+        <p>Get 50% OFF Premium Subscription</p>
+      </div>
+
+      <div class="ad-box">
+        <strong>New Product Launch</strong>
+        <p>Revolutionary Smartphone Available Now</p>
+      </div>
+
+      <div class="ad-box">
+        <strong>Limited Time</strong>
+        <p>Free Shipping on All Orders</p>
+      </div>
+
+      <div class="ad-box">
+        <strong>Subscribe Today</strong>
+        <p>Ad-Free Experience Awaits</p>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
