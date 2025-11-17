@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Library Management System</title>
+</head>
+
+<body>
+  <h1>Library Management System</h1>
+
+  <!-- Input fields -->
+  <div>
+    <label for="bookTitle">Book Title:</label>
+    <input type="text" id="bookTitle" placeholder="Enter book title">
+    <span id="titleError" style="color: red;"></span>
+  </div>
+  <br>
+
+  <div>
+    <label for="publicationYear">Publication Year:</label>
+    <input type="text" id="publicationYear" placeholder="Enter publication year">
+    <span id="yearError" style="color: red;"></span>
+  </div>
+  <br>
+
+  <!-- Add Book button -->
+  <button onclick="addBook()">Add Book</button>
+
+  <br><br>
+
+  <!-- Table to display books -->
+  <table border="1" cellpadding="10" cellspacing="0">
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Year</th>
+      </tr>
+    </thead>
+    <tbody id="bookTableBody">
+      <!-- Books will be added here dynamically -->
+    </tbody>
+  </table>
+
+  <script>
+    function addBook() {
+      // Get input values
+      const titleInput = document.getElementById('bookTitle');
+      const yearInput = document.getElementById('publicationYear');
+      const titleError = document.getElementById('titleError');
+      const yearError = document.getElementById('yearError');
+
+      const title = titleInput.value.trim();
+      const year = yearInput.value.trim();
+
+      // Clear previous error messages
+      titleError.textContent = '';
+      yearError.textContent = '';
+
+      let isValid = true;
+
+      // Validate title: must not be empty and must only contain alphabetic characters (no spaces)
+      if (title === '') {
+        titleError.textContent = 'Title cannot be empty.';
+        isValid = false;
+      } else if (!/^[A-Za-z]+$/.test(title)) {
+        titleError.textContent = 'Title must contain only alphabetic characters (no numbers, special characters, or spaces).';
+        isValid = false;
+      }
+
+      // Validate year: must be a four-digit number between 1900 and current year
+      const currentYear = new Date().getFullYear();
+      if (year === '') {
+        yearError.textContent = 'Year cannot be empty.';
+        isValid = false;
+      } else if (!/^\d{4}$/.test(year)) {
+        yearError.textContent = 'Year must be a four-digit number.';
+        isValid = false;
+      } else {
+        const yearNum = parseInt(year);
+        if (yearNum < 1900 || yearNum > currentYear) {
+          yearError.textContent = `Year must be between 1900 and ${currentYear}.`;
+          isValid = false;
+        }
+      }
+
+      // If validation passes, add book to table
+      if (isValid) {
+        const tableBody = document.getElementById('bookTableBody');
+        const newRow = tableBody.insertRow();
+
+        // Add cells for title and year
+        const titleCell = newRow.insertCell(0);
+        const yearCell = newRow.insertCell(1);
+
+        titleCell.textContent = title;
+        yearCell.textContent = year;
+
+        // Set background color based on publication year
+        const yearNum = parseInt(year);
+        if (yearNum < 2000) {
+          newRow.style.backgroundColor = 'lightgray';
+        } else {
+          newRow.style.backgroundColor = 'lightgreen';
+        }
+
+        // Clear input fields after successful submission
+        titleInput.value = '';
+        yearInput.value = '';
+      }
+    }
+
+    // Allow Enter key to submit
+    document.getElementById('publicationYear').addEventListener('keypress', function (e) {
+      if (e.key === 'Enter') {
+        addBook();
+      }
+    });
+
+    document.getElementById('bookTitle').addEventListener('keypress', function (e) {
+      if (e.key === 'Enter') {
+        addBook();
+      }
+    });
+  </script>
+</body>
+
+</html>
