@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lab Task 08: Overflow Handling Box</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+
+    h2 {
+      margin-top: 30px;
+      color: #333;
+    }
+
+     
+    .box {
+      width: 300px;
+      height: 200px;
+      border: 2px solid #333;
+      padding: 15px;
+      margin-bottom: 30px;
+      background-color: #f9f9f9;
+    }
+
+    
+    .overflow-visible {
+      overflow: visible;
+    }
+
+     
+    .overflow-hidden {
+      overflow: hidden;
+    }
+
+    
+    .overflow-scroll {
+      overflow: scroll;
+    }
+
+    
+    .overflow-auto {
+      overflow: auto;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Overflow Handling Box - Testing Different Overflow Values</h1>
+
+ 
+  <h2>1. overflow: visible</h2>
+  <div class="box overflow-visible">
+  
+    <p>
+      Photography is the art of capturing moments that often pass too quickly to notice. A single frame can preserve emotion,
+      light, and stories in ways words sometimes can't. Whether it's a quiet street, a smiling face, or a dramatic landscape,
+      photography turns everyday scenes into lasting memories. It's a creative way to see the world with more attention and
+      appreciation.
+    </p>
+    <p>
+      Additional paragraph to demonstrate overflow behavior. This text will extend beyond
+      the fixed dimensions of the container box and show how the overflow property handles it.
+    </p>
+  </div>
+
+   
+  <h2>2. overflow: hidden</h2>
+  <div class="box overflow-hidden">
+ 
+    <p>
+      Photography is the art of capturing moments that often pass too quickly to notice. A single frame can preserve emotion,
+      light, and stories in ways words sometimes can't. Whether it's a quiet street, a smiling face, or a dramatic landscape,
+      photography turns everyday scenes into lasting memories. It's a creative way to see the world with more attention and
+      appreciation.
+    </p>
+    <p>
+      Additional paragraph to demonstrate overflow behavior. This text will extend beyond
+      the fixed dimensions of the container box and show how the overflow property handles it.
+    </p>
+  </div>
+
+ 
+  <h2>3. overflow: scroll</h2>
+  <div class="box overflow-scroll">
+   
+    <p>
+      Photography is the art of capturing moments that often pass too quickly to notice. A single frame can preserve emotion,
+      light, and stories in ways words sometimes can't. Whether it's a quiet street, a smiling face, or a dramatic landscape,
+      photography turns everyday scenes into lasting memories. It's a creative way to see the world with more attention and
+      appreciation.
+    </p>
+    <p>
+      Additional paragraph to demonstrate overflow behavior. This text will extend beyond
+      the fixed dimensions of the container box and show how the overflow property handles it.
+    </p>
+  </div>
+
+   
+  <h2>4. overflow: auto</h2>
+  <div class="box overflow-auto">
+     
+    <p>
+      Photography is the art of capturing moments that often pass too quickly to notice. A single frame can preserve emotion,
+      light, and stories in ways words sometimes can't. Whether it's a quiet street, a smiling face, or a dramatic landscape,
+      photography turns everyday scenes into lasting memories. It's a creative way to see the world with more attention and
+      appreciation.
+    </p>
+    <p>
+      Additional paragraph to demonstrate overflow behavior. This text will extend beyond
+      the fixed dimensions of the container box and show how the overflow property handles it.
+    </p>
+  </div>
+</body>
+
+</html>
